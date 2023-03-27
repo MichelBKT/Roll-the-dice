@@ -47,26 +47,26 @@ let player1 = true
 let numbersRoundPlayer1 = []
 let numbersRoundPlayer2 = []
 let numberofDice = document.getElementById("#playButton")
-
-
-
+const animation = document.querySelector(".cube")
+const anim = () =>{
+   animation.style.animationDuration = "90ms"      
+   setTimeout(function(){animation.style.animation = "unset",1000})
+}
+anim()
 const clicPlay = () => {
-   const animation = document.querySelector(".cube")
+   
    const face = document.querySelector("#dice1")
-   const anim = () =>{
-      animation.style.animationDuration = "90ms"      
-      setTimeout(function(){animation.style.animation = "unset",1000})
-   }
+
 
    for (let i = 0 ; i <= numberofDice; i++){
- 
+
       let numbers = getRandomInt(1,7)
       if (numbers === 1 && player1 === true){
-         anim()
          face.setAttribute("src", "./image/dés face " + numbers + ".jpg")
          scorePlayer1.innerHTML = 0
          numbersRoundPlayer1.splice(0)
          player1 = false
+         
         
       } else if (numbers > 1 && player1 === true){
          anim()
@@ -77,11 +77,13 @@ const clicPlay = () => {
          numbersRoundPlayer1.push(numbers)
          scorePlayer1.innerHTML = sumPlayer1
          player1 = true
+         
       } else if (player1 === false && numbers === 1){
          face.setAttribute("src", "./image/dés face " + numbers + ".jpg")
          scorePlayer2.innerHTML = 0
          numbersRoundPlayer2.splice(0)
          player1 = true
+       
       } else if (player1 === false && numbers > 1){
          face.setAttribute("src", "./image/dés face " + numbers + ".jpg")
          const sumPlayer2 = numbersRoundPlayer2.reduce((partialSum, a) => partialSum + a, 0)
@@ -90,6 +92,7 @@ const clicPlay = () => {
          console.log(numbersRoundPlayer2)
          console.log(sumPlayer2)
          player1 = false
+         
       }
    }
 } 
