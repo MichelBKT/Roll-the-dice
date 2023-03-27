@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+   <h1> Roll the Dice</h1> 
+   <div class="game">
+    <div class="start">
+        <img src="./image/start.jpg" id="js-newGame" alt="logoStart">
+    </div>
+    <div class="players">
+        <div class="player1">
+            <h2 id="js-Player1">Player 1</h2>
+        </div>
+        <div class="player2">
+            <h2 id="js-Player2">Player 2</h2>
+        </div>
+    </div>
+    <div class="score-container">
+        <div class="score-player1">
+            <p id="scorePlayer1">48</p>
+        </div>
+        <div class="score-current-player1">
+            <p>CURRENT</p>
+            <p class="score" id="currentScore1">11</p>
+        </div>
+        <div class="cube-container">
+            <div class="cube">
+                <div class="face front">
+                    <img src="./image/dés face 1.jpg" alt="face1" id="dice1" >
+                </div>
+                <div class="face back"></div>
+                <div class="face right"></div>
+                <div class="face left"></div>
+                <div class="face top" id="faceTop"></div>
+                <div class="face bottom"></div>
+            </div>
+        </div>
+        <div class="score-player2">
+            <p id="scorePlayer2">72</p>
+        </div>
+        <div class="score-current-player2">
+            <p>CURRENT</p>
+            <p class="score" id="currentScore2">30</p>
+        </div>
+    </div>
+    <div class="roll-container">
+        <div class="roll">
+            <img src="./image/play button.jpg" id="playButton" alt="play-button">
+            <div class="roll-text">
+                <p>ROLL</p>
+            </div>
+        </div>
+    </div>
+   <div class="hold-container">
+        <div class="hold">
+            <img src="./image/hold button.jpg" alt="hold-button">
+            <div class="hold-text">
+                <p>HOLD</p>
+            </div>
+        </div>
+   </div>
+   </div>
+   <script src="script.js"></script>
+</body>
+</html>

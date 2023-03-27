@@ -1,0 +1,169 @@
+@charset "UTF-8";
+body {
+  background: url(./image/bckg.jpg) center/cover;
+  min-height: 100vh;
+  font-family: "Michroma", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  letter-spacing: 2px;
+  color: rgba(59, 7, 7, 0.703);
+  font-size: 2.5rem;
+}
+
+.game {
+  background: url(./image/piste.jpg) center/cover;
+  height: 600px;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.players {
+  display: flex;
+  justify-content: space-around;
+}
+
+h2 {
+  color: darkgreen;
+  font-size: 2rem;
+  background-color: lightgray;
+  margin: 0;
+}
+
+.start img {
+  width: 10%;
+  border-radius: 100%;
+}
+
+.start {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.score-container {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  justify-items: center;
+  height: 100px;
+  margin-top: 20px;
+}
+
+.score-player1, .score-player2 {
+  display: grid;
+  align-items: center;
+  background-color: lightgray;
+  padding: 0 20px;
+  color: darkgreen;
+  font-size: 2rem;
+  background-color: lightgray;
+  margin: 0;
+  width: 80px;
+}
+
+.score-current-player1, .score-current-player2 {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  background-color: red;
+  font-weight: bold;
+  font-size: 0.8rem;
+  width: 50%;
+  border-radius: 20%;
+}
+
+.score {
+  font-size: 1.5rem;
+}
+
+.hold img, .roll img {
+  width: 10%;
+  border-radius: 100%;
+}
+
+.roll, .hold {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-left: 100px;
+}
+
+.roll-text, .hold-text {
+  color: darkgreen;
+  font-size: 1.5rem;
+  background-color: lightgray;
+  margin: 0 10px;
+}
+
+.cube-container {
+  display: grid;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  perspective: 1000px;
+}
+
+.cube {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: spin 10s infinite linear;
+}
+
+.face {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+#dice1 {
+  width: 100px;
+  height: 100px;
+}
+
+.top {
+  background: url(./image/dés\ face\ 5.jpg) center/cover;
+  border-radius: 10%;
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.bottom {
+  background: url(./image/dés\ face\ 6.jpg) center/cover;
+  border-radius: 10%;
+  transform: rotateX(-90deg) translateZ(50px);
+}
+
+.right {
+  background: url(./image/dés\ face\ 3.jpg) center/cover;
+  border-radius: 10%;
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.left {
+  background: url(./image/dés\ face\ 4.jpg) center/cover;
+  border-radius: 10%;
+  transform: rotateY(-90deg) translateZ(50px);
+}
+
+.front {
+  background: url(./image/dés\ face\ 1.jpg) center/cover;
+  border-radius: 10%;
+  transform: rotateX(0deg) translateZ(50px);
+}
+
+.back {
+  background: url(./image/dés\ face\ 2.jpg) center/cover;
+  border-radius: 10%;
+  transform: rotateX(-180deg) translateZ(50px);
+}
+
+@keyframes spin {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}/*# sourceMappingURL=style.css.map */
