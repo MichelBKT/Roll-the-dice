@@ -1,7 +1,7 @@
 @charset "UTF-8";
 body {
   background: url(./image/bckg.jpg) center/cover;
-  min-height: 100vh;
+  min-height: 150vh;
   font-family: "Michroma", sans-serif;
 }
 
@@ -14,21 +14,48 @@ h1 {
 
 .game {
   background: url(./image/piste.jpg) center/cover;
-  height: 600px;
+  height: 700px;
   width: 1000px;
   margin: 0 auto;
 }
 
 .players {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 40% 10% 40% 10%;
+}
+
+.player1 .player2 {
+  width: 350px;
+  display: grid;
 }
 
 h2 {
   color: darkgreen;
   font-size: 2rem;
+  margin-left: 100px;
+  padding: 10px 20px;
+  max-width: 350px;
   background-color: lightgray;
-  margin: 0;
+}
+
+.player-round1 {
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  background-color: none;
+  display: grid;
+  padding: 5px;
+  margin-right: 20px;
+}
+
+.player-round2 {
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  background-color: none;
+  display: grid;
+  padding: 5px;
+  margin-right: 20px;
 }
 
 .start img {
@@ -39,7 +66,7 @@ h2 {
 .start {
   display: flex;
   justify-content: center;
-  padding-top: 50px;
+  padding-top: 20px;
 }
 
 .score-container {
@@ -52,6 +79,7 @@ h2 {
 
 .score-player1, .score-player2 {
   display: grid;
+  text-align: center;
   align-items: center;
   background-color: lightgray;
   padding: 0 20px;
@@ -121,6 +149,7 @@ h2 {
 #dice1 {
   width: 100px;
   height: 100px;
+  border-radius: 20%;
 }
 
 .top {
