@@ -11,31 +11,16 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-   <h1> Roll the Dice</h1> 
+   <h1 class="title">Roll the Dice</h1> 
    <div class="game">
-    <div class="start">
-        <img src="./image/start.jpg" id="js-newGame" alt="logoStart">
-    </div>
-    <div class="players">
-        <div class="player1">
-            <h2 class="css-Player1" id="js-Player1">Player 1</h2>
-        </div> 
-            <div class="player-round1" id="playerRound1"></div>
-        
-        <div class="player2">
-            <h2 class="css-Player2" id="js-Player2">Player 2</h2>
-        </div>
+        <img src="./image/start.jpg" class= "start-button" id="js-newGame" alt="logoStart">
+        <p class="player1" id="js-Player1">Player 1
+        <div class="player-round1" id="playerRound1"></div></p>
+            <p class="player2" id="js-Player2">Player 2
                 <div class="player-round2" id="playerRound2"></div>
-        
-    </div>
-    <div class="score-container">
-        <div class="score-player1">
-            <p id="scorePlayer1">0</p>
-        </div>
-        <div class="score-current-player1">
-            <p>CURRENT</p>
-            <p class="score" id="currentScore1">0</p>
-        </div>
+            </p>
+        <p class="score-player1" id="scorePlayer1">0</p>
+        <p class= "score-player2" id="scorePlayer2">0</p>
         <div class="cube-container">
             <div class="cube">
                 <div class="face front">
@@ -47,32 +32,24 @@
                 <div class="face top" id="faceTop"></div>
                 <div class="face bottom"></div>
             </div>
-        </div>
-        <div class="score-player2">
-            <p id="scorePlayer2">0</p>
-        </div>
-        <div class="score-current-player2">
+        </div>    
+        <div class="current-player1">
             <p>CURRENT</p>
-            <p class="score" id="currentScore2">0</p>
+            <p id="currentScore1">0</p> 
+        </div> 
+        <div class="current-player2">
+            <p>CURRENT</p>
+            <p id="currentScore2">0</p>
         </div>
-    </div>
-    <div class="roll-container">
         <div class="roll">
-            <img src="./image/play button.jpg" id="playButton" alt="play-button">
-            <div class="roll-text">
-                <p>ROLL</p>
-            </div>
+            <img src="./image/play button.jpg" id="playButton" alt="play-button">    
+            <span>ROLL</span>
         </div>
-    </div>
-   <div class="hold-container">
         <div class="hold">
             <img src="./image/hold button.jpg" id = "holdButton" alt="hold-button">
-            <div class="hold-text">
-                <p>HOLD</p>
-            </div>
+            <span>HOLD</span>
         </div>
-   </div>
-   </div>
+    </div>
    <script src="script.js"></script>
 </body>
 </html>

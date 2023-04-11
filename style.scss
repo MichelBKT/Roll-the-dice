@@ -1,7 +1,7 @@
 body{
     background: url(./image/bckg.jpg) center/cover;
-    min-height: 150vh;
     font-family: 'Michroma', sans-serif;
+    height: 100vh;
 }
 h1{
     text-align: center;
@@ -10,115 +10,88 @@ h1{
     font-size: 2.5rem;
 }
 .game{
-    background: url(./image/piste.jpg) center/cover;
-    height: 700px;
-    width: 1000px;
+    width: 1500px;
+    height: 1000px;
     margin: 0 auto;
-
-}
-.players{
+    background: url(./image/piste.jpg) center/cover;
     display: grid;
-    grid-template-columns: 40% 10% 40% 10%;
-
+    grid-template-columns: 35% 10% 10% 35% 10%;
+    grid-template-rows: 20% 10% 15% 20% 10% 13% 20%;
 }
-.player1 .player2{
-    width: 350px;
-    display: grid;
-
-
+@media screen and (max-width: 767px) {
+    .game{
+    width: 90%;
+    height: 90%;
+    
+    }
 }
-h2{
-    color: darkgreen;
-    font-size: 2rem;
-    margin-left: 100px;
-    padding: 10px 20px;
-    max-width: 350px;
-    background-color: lightgray;
+.start-button{
+    margin-top: 5px;
+    width: 100px;
+    border-radius: 50% 50%;
+    justify-self: center;
+    grid-column: span 4;
+}
+.player1{
+    color: white;
+    background-color: rgb(30, 30, 190);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row-start: 2;
+
 }
 .player-round1{
-    height: 10px;
-    width: 10px;
-    border-radius: 100%;
-    background-color: none;
-    display: grid;
-    padding: 5px;
-    margin-right: 20px;
+    border-radius: 50% 50%;
+    width: 20px;
+    height: 20px;
+    grid-row: 2;
+    grid-column: 2;
 }
 .player-round2{
-    height: 10px;
-    width: 10px;
-    border-radius: 100%;
-    background-color: none;
-    display: grid;
-    padding: 5px;
-    margin-right: 20px;
-}
-
-.start img{
-    width: 10%;
-    border-radius: 100%;
-
-}
-.start{
-    display: flex;
-    justify-content: center;
-    padding-top: 20px;
-}
-
-.score-container{
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    justify-items: center;
-    height: 100px;
-    margin-top: 20px;
-
-}
-.score-player1, .score-player2{
-    display: grid;
-    text-align: center;
-    align-items: center;
-    background-color: lightgray;
-    padding: 0 20px;
-    color: darkgreen;
-    font-size: 2rem;
-    background-color: lightgray;
-    margin: 0;
-    width: 80px;
-
-}
-.score-current-player1, .score-current-player2{
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    background-color: red;
-    font-weight: bold;
-    font-size: 0.8rem;
-    width: 50%;
-    border-radius: 20%;
-}
-.score{
-    font-size: 1.5rem;
-}
-.hold img, .roll img{
-    width: 10%;
-    border-radius: 100%;
-}
-.roll, .hold{
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-    margin-left: 100px;
+    border-radius: 50% 50%;
+    width: 20px;
+    height: 20px;
+    grid-column: 5;
     
 }
-.roll-text, .hold-text{
-    color: darkgreen;
-    font-size: 1.5rem;
-    background-color: lightgray;
-    margin: 0 10px;
+.player2{
+    color: white;
+    background-color: rgb(30, 30, 190);
+    height: 40px;
+    grid-row: 2;
+    grid-column: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.score-player1{
+    font-weight: 900;
+    font-size: xx-large;
+    background-color: gold;
+    grid-column: 1;
+    grid-row: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20% 20%;
+}
+.score-player2{
+    font-weight: 900;
+    font-size: xx-large;
+    background-color: gold;
+    grid-column: 4;
+    grid-row: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20% 20%;
 }
 .cube-container{
     display: grid;
-    justify-content: center;
+    grid-row: 4;
+    grid-column: 2 ;
     width: 100px;
     height: 100px;
     perspective: 1000px;
@@ -172,10 +145,76 @@ h2{
     transform: rotateX(-180deg) translateZ(50px);
 }
 @keyframes spin{
-    from {
-        transform: rotateX(0deg) rotateY(0deg);
-    }
-    to{
+  from {
+       transform: rotateX(0deg) rotateY(0deg);
+}
+  to{
         transform: rotateX(360deg) rotateY(360deg);
+   }
+}
+.current-player1{
+    grid-row: 5;
+    background-color: orange;
+    font-weight: 900;
+    border-radius: 20% 20%;
+}
+.current-player1 p{
+    display: flex;
+    justify-content: center;
+    font-size: small;
+}
+.current-player2{
+    grid-column: 4;
+    grid-row: 5;
+    background-color: orange;
+    font-weight: 900;
+    border-radius: 20% 20%;
+}
+.current-player2 p{
+    display: flex;
+    justify-content: center;
+    font-size: small;
+}
+.roll{
+    grid-row: 6;
+    width: 100px;
+    grid-column: span 6;
+    justify-self: center;
+}
+.roll img{
+    width: 60px;
+    border-radius: 50% 50%;
+    
+}
+.roll span{
+    background-color: blueviolet;
+    color: white;
+
+}
+.hold{
+    grid-row: 7;
+    width: 100px;
+    grid-column: span 6;
+    justify-self: center;
+}
+
+.hold img{
+    width: 60px;
+    border-radius: 50% 50%;
+}
+.hold span{
+    background-color: blueviolet;
+    color: white;
+    grid-column: 4;
+
+}
+@media screen and (min-width: 768px) {
+    .game{
+    width: 90%;
+    height: 90%;
+    }
+    .cube-container{
+    grid-column: span 6;
+    justify-self: center;
     }
 }
