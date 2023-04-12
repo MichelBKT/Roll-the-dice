@@ -6,8 +6,8 @@
 // OK affichage player en cours
 // OK fin de partie à 100
 // OK responsive design à revoir
-// validation des données
-// réglage de l'animation
+// OK validation des données
+// OK réglage de l'animation
 //Règles :
 //Le jeu comprend 2 joueurs sur un seul et même écran.
 //Chaque joueur possède un score temporaire (ROUND) et un score global (GLOBAL). À chaque tour, le joueur a son ROUND initialisé à 0 et peut lancer un dé autant de fois qu'il le souhaite. Le résultat d’un lancer est ajouté au ROUND.
