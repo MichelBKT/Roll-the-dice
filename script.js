@@ -5,7 +5,7 @@
 // OK current score à definir 
 // OK affichage player en cours
 // fin de partie à 100
-// responsive design à revoir
+// OK responsive design à revoir
 // validation des données
 // réglage de l'animation
 //Règles :
@@ -75,11 +75,7 @@ const sumPlayer2 = numbersRoundPlayer2.reduce((partialSum, a) => partialSum + a,
 
 const clicPlay = () => {
    
-   
-   
-
    for(let winner=0; winner <= numberofDice; winner++){
-      //anim()
       const face = document.querySelector("#dice1")
       let numbers = getRandomInt(1,7)
 
