@@ -4,7 +4,7 @@
 // OK enregistrement score en cours
 // OK current score à definir 
 // OK affichage player en cours
-// fin de partie à 100
+// OK fin de partie à 100
 // OK responsive design à revoir
 // validation des données
 // réglage de l'animation
@@ -75,7 +75,7 @@ const sumPlayer2 = numbersRoundPlayer2.reduce((partialSum, a) => partialSum + a,
 
 const clicPlay = () => {
    
-   for(let winner=0; winner <= numberofDice; winner++){
+   for(let cpt = 0; cpt <= numberofDice; cpt++){
       const face = document.querySelector("#dice1")
       let numbers = getRandomInt(1,7)
 
@@ -86,7 +86,7 @@ const clicPlay = () => {
          numbersRoundPlayer1.splice(0)
          setTimeout(function(){animation.style.animation = "unset",1000})
          changePlayer1(playerRound1 = false)
-         winner = 0
+         
 
       } else if (numbers > 1 && playerRound1 === true){
          setTimeout(function(){animation.style.animation = "unset",1000})
@@ -96,10 +96,10 @@ const clicPlay = () => {
          console.log(sumPlayer1)
          numbersRoundPlayer1.push(numbers)
          scorePlayer1.innerHTML = sumPlayer1
-
          changePlayer1(playerRound1 = true)
-         winner = currentScore1
-
+         if (currentScore1 >=100){
+            alert(`${document.querySelector('#js-Player1').innerHTML} WINNER !`)
+         }
       } else if (playerRound1 === false && numbers === 1){
          setTimeout(function(){animation.style.animation = "unset",1000})
          face.setAttribute("src", "./image/dés face " + numbers + ".jpg")
@@ -107,7 +107,7 @@ const clicPlay = () => {
          numbersRoundPlayer2.splice(0)
          setTimeout(function(){animation.style.animation = "unset",1000})
          changePlayer1(playerRound1 = true)
-         winner = 0
+         
 
       } else if (playerRound1 === false && numbers > 1){
          setTimeout(function(){animation.style.animation = "unset",1000})
@@ -119,11 +119,12 @@ const clicPlay = () => {
          console.log(sumPlayer2)
          setTimeout(function(){animation.style.animation = "unset",1000})
          changePlayer1(playerRound1 = false)
-         winner = currentScore2
-      }
-      
+         if (currentScore2 >=100){
+            alert(`${document.querySelector('#js-Player2').innerHTML} WINNER !`)
+         }
+      } 
    }
-} 
+      }
 const current1 = document.querySelector("#currentScore1")
 const current2 = document.querySelector("#currentScore2")
 let currentScore1 = 0
